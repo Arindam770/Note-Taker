@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>
+        <%= filename %> - Task Manager
+    </title>
+</head>
+
+<body class="bg-zinc-950 font-sans antialiased text-zinc-100">
+    <main class="w-full min-h-screen bg-zinc-950 p-6 sm:p-10 flex flex-col items-center">
+        <div class="w-full max-w-3xl flex flex-col gap-6">
+            <!-- Navigation Header -->
+            <div class="flex items-center justify-between">
+                <a href="/"
+                    class="inline-flex items-center gap-2 text-sm font-medium text-zinc-400 hover:text-white transition duration-150 group">
+                    <span class="transition-transform group-hover:-translate-x-0.5">&larr;</span>
+                    Back to Tasks
+                </a>
+            </div>
+
+            <!-- Task Detail Card -->
+            <article class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-8 shadow-xl">
+                <!-- Header -->
+                <header class="border-b border-zinc-800/80 pb-5 mb-6">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-blue-400">Task Document</span>
+                    <h1 class="text-2xl sm:text-3xl font-bold text-white tracking-tight break-words mt-1">
+                        <%= filename %>
+                    </h1>
+                </header>
+
+                <!-- Body / Details -->
+                <div
+                    class="text-zinc-300 text-sm sm:text-base leading-relaxed whitespace-pre-wrap break-words min-h-32">
+                    <%= fileContent %>
+                </div>
+            </article>
+        </div>
+    </main>
+</body>
+
+</html>
